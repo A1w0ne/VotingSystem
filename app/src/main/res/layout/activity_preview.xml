@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F9FAFB"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Title / Back Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+
+            <!-- Back Button (to SecretaryActivity) -->
+            <FrameLayout
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/rounded_white_bg"
+                android:layout_gravity="center_vertical">
+
+                <ImageButton
+                    android:id="@+id/btnBack"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/back"
+                    android:contentDescription="Back"
+                    android:scaleType="centerInside"
+                    app:tint="#1F2937"/>
+            </FrameLayout>
+
+            <!-- Title centered -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Preview Your Choices"
+                android:textColor="#0F172A"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp" />
+
+            <!-- Empty placeholder to balance layout -->
+            <View
+                android:layout_width="30dp"
+                android:layout_height="30dp"/>
+        </LinearLayout>
+
+        <!-- Show whatever selections were made. For brevity, we'll just show simple TextViews: -->
+        <TextView
+            android:id="@+id/tvPreviewPresident"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="President: —"
+            android:textColor="#0F172A"
+            android:textSize="16sp"
+            android:padding="8dp"/>
+
+        <TextView
+            android:id="@+id/tvPreviewVP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vice-President: —"
+            android:textColor="#0F172A"
+            android:textSize="16sp"
+            android:padding="8dp"/>
+
+        <TextView
+            android:id="@+id/tvPreviewSecretary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Secretary: —"
+            android:textColor="#0F172A"
+            android:textSize="16sp"
+            android:padding="8dp"/>
+
+        <!-- Confirm Button -->
+        <Button
+            android:id="@+id/btnConfirm"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:backgroundTint="#1E88E5"
+            android:text="CONFIRM VOTE"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="24dp"/>
+    </LinearLayout>
+</ScrollView>

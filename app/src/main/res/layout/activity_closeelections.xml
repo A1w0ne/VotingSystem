@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- ======== TOP BAR: Back arrow, Title, Notification bell ======== -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <FrameLayout
+                android:layout_width="18dp"
+                android:layout_height="26dp"
+                android:background="@drawable/rounded_white_bg"
+                android:foregroundGravity="center">
+
+                <ImageButton
+                    android:id="@+id/backButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/back"
+                    android:contentDescription="Back"
+                    android:scaleType="centerInside"
+                    app:tint="#1F2937" />
+            </FrameLayout>
+
+            <!-- Title -->
+            <TextView
+                android:id="@+id/tvScreenTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Close Elections"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#0F172A"
+                android:gravity="center" />
+
+            <!-- Notification Bell -->
+            <FrameLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/rounded_white_bg"
+                android:foregroundGravity="center">
+
+                <ImageButton
+                    android:id="@+id/btnotifcation"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/notification"
+                    android:contentDescription="notification"
+                    android:scaleType="centerInside"
+                    app:tint="#1F2937" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <!-- ======== FIRST ELECTION CARD ======== -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardElection1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="2dp"
+            android:background="#FFFFFF">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Row 1: Title + Status Pill -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/Election1Title"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="SSC President Election"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="#1F2937" />
+
+                    <TextView
+                        android:id="@+id/tvElection1Status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Closed"
+                        android:textSize="12sp"
+                        android:textColor="#B91C1C"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="4dp"
+                        android:background="@drawable/status_tag_red" />
+                </LinearLayout>
+
+                <!-- Row 2: Date with Calendar Icon -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/imgCalendar1"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:src="@drawable/calendar"
+                        android:contentDescription="Calendar"
+                        app:tint="#6B7280" />
+
+                    <TextView
+                        android:id="@+id/tvElection1Dates"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="June 1 – 5, 2025"
+                        android:textSize="14sp"
+                        android:textColor="#4B5563"
+                        android:layout_marginStart="6dp" />
+                </LinearLayout>
+                <!-- Row 3: Single “View Result” button aligned to the right -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <!-- Spacer to push the button to the right -->
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:id="@+id/btnViewResult1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/status_tag_red"
+                        android:backgroundTint="#9CA3AF"
+                        android:backgroundTintMode="src_in"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:text="View Result"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <!-- ======== SECOND ELECTION CARD ======== -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardElection2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="2dp"
+            android:background="#FFFFFF">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Row 1: Title + Status Pill -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/Election2Title"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Cultural Secretary Election"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="#1F2937" />
+
+                    <TextView
+                        android:id="@+id/tvElection2Status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pending"
+                        android:textSize="12sp"
+                        android:textColor="#000000"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="4dp"
+                        android:background="@drawable/status_tag_gray" />
+                </LinearLayout>
+
+                <!-- Row 2: Date with Calendar Icon -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/imgCalendar2"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:src="@drawable/calendar"
+                        android:contentDescription="Calendar"
+                        app:tint="#6B7280" />
+
+                    <TextView
+                        android:id="@+id/tvElection2Dates"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="June 3 – 7, 2025"
+                        android:textSize="14sp"
+                        android:textColor="#4B5563"
+                        android:layout_marginStart="6dp" />
+                </LinearLayout>
+
+                <!-- Row 3: Single “View Result” button aligned to the right -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <!-- Spacer to push the button to the right -->
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:id="@+id/btnViewResult2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Waiting for result"
+                        android:textSize="14sp"
+                        android:textColor="#FFFFFF"
+                        android:background="@drawable/status_tag_gray"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- ======== THIRD ELECTION CARD ======== -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardElection3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="2dp"
+            android:background="#FFFFFF">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Row 1: Title + Status Pill -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/Election3Title"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Finance Officer Election"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="#1F2937" />
+
+                    <TextView
+                        android:id="@+id/tvElection3Status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Closed"
+                        android:textSize="12sp"
+                        android:textColor="#B91C1C"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="4dp"
+                        android:background="@drawable/status_tag_red" />
+                </LinearLayout>
+
+                <!-- Row 2: Date with Calendar Icon -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/imgCalendar3"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:src="@drawable/calendar"
+                        android:contentDescription="Calendar"
+                        app:tint="#6B7280" />
+
+                    <TextView
+                        android:id="@+id/tvElection3Dates"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="May 20 – 22, 2025"
+                        android:textSize="14sp"
+                        android:textColor="#4B5563"
+                        android:layout_marginStart="6dp" />
+                </LinearLayout>
+
+                <!-- Row 3: Single “View Result” button aligned to the right -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <!-- Spacer to push the button to the right -->
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:id="@+id/btnViewResult3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="View Result"
+                        android:textSize="14sp"
+                        android:textColor="#FFFFFF"
+                        android:background="@drawable/status_tag_gray"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <!-- ======== THIRD ELECTION CARD ======== -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/Election3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="2dp"
+            android:background="#FFFFFF">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Row 1: Title + Status Pill -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/Election4Title"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Finance Officer Election"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="#1F2937" />
+
+                    <TextView
+                        android:id="@+id/tvElection4Status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Closed"
+                        android:textSize="12sp"
+                        android:textColor="#B91C1C"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="4dp"
+                        android:background="@drawable/status_tag_red" />
+                </LinearLayout>
+
+                <!-- Row 2: Date with Calendar Icon -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/calendar"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:src="@drawable/calendar"
+                        android:contentDescription="Calendar"
+                        app:tint="#6B7280" />
+
+                    <TextView
+                        android:id="@+id/Election3Dates"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="May 20 – 22, 2025"
+                        android:textSize="14sp"
+                        android:textColor="#4B5563"
+                        android:layout_marginStart="6dp" />
+                </LinearLayout>
+
+                <!-- Row 3: Single “View Result” button aligned to the right -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <!-- Spacer to push the button to the right -->
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:id="@+id/btnViewResult4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="View Result"
+                        android:textSize="14sp"
+                        android:textColor="#FFFFFF"
+                        android:background="@drawable/status_tag_gray"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+</ScrollView>
